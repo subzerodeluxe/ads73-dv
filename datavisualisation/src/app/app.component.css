@@ -1,0 +1,12 @@
+h1 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+    margin-top: 12vh;
+}
+
+.chart {
+    margin: 0 auto; 
+    max-width: 600px;
+}
