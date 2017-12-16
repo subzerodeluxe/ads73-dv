@@ -1,2 +1,2 @@
-# ads73-dv
-Data Visualization excersises
+# Data Visualization Portfolio
+Contains assignments and my personal project
