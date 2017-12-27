@@ -2,31 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Data Visualisation by Maarten Waanders</title>
+  <title>Data Visualization by Maarten Waanders</title>
  
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-</head>
-<body>
-    <div class="title" style="text-align:center">
-        <h1>
-          The truth behind stereotypes
-        </h1>
-      </div>
-      
-      <div class="container">
-        
-              <h2>Temperature Changes</h2>
-        
-              <div id="viz"></div>
-        
-      </div><!-- container -->
 
-    <script src="js/libraries/jquery/jquery.min.js"></script>
-    <script src="js/libraries/bootstrap/bootstrap.min.js"></script>
-    <script src="js/libraries/d3/d3.min.js"></script>
-    <script src="js/script.js"></script>
+</head>
+<body id="page-top">
+    
+   <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+      <div class="container">
+        <a style="color: #CBBA50;" class="navbar-brand js-scroll-trigger" href="#page-top">
+          <i class="fa fa-angle-up fa-3x"></i>
+        </a>
+      </div>
+    </nav>
+
+     <!-- Intro -->
+     <header class="masthead" style="background-image: url('img/female_blue.png') no-repeat;">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-12 my-auto text-center">
+            <div class="masthead-title">The truth behind stereotypes</div>
+            <hr class="colored">
+            <div class="masthead-subtitle"><p>Stereotypes and prejudices go hand in hand. But what does data tell us?<br>
+              In this interactive visualization you will learn that your thoughts are not always the truth ...
+            </p></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-down">
+        <a class="btn js-scroll-trigger" href="#chart1">
+          <i class="fa fa-angle-down fa-fw"></i>
+        </a>
+      </div>
+    </header>
+
+    <!-- First Chart -->
+    <section class="page-section" id="chart1">
+      <div class="container-fluid">
+          <div class="subtitle">Boys are more interested in PCs</div>
+        <hr class="colored">
+        <button type="button" id="change" class="btn btn-outline-primary btn-lg">Change stereotype</button>
+            <div id="chart"></div>  
+            <div id="viz"></div>   
+      </div>
+
+    </section>
+
+  <script src="js/libraries/jquery/jquery.min.js"></script>
+  <script src="js/libraries/bootstrap/bootstrap.min.js"></script>
+  <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+  
+  <script src="https://d3js.org/d3.v3.min.js"></script>
+  <script src="js/script.js"></script>
+
 </body>
 </html>
