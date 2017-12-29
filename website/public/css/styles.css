@@ -258,16 +258,22 @@ text {
   display: none;
 }
 
+/* BOOTSTRAP BUTTONS */ 
 .btn-outline-primary {
-  color: #C4B147;
-  background-color: transparent;
-  background-image: none;
-  border-color: #C4B147;
+  color: #C4B147 !important;
+  background-color: transparent !important;
+  background-image: none !important;
+  border-color: #C4B147 !important; 
 }
 
-.btn-outline-primary:hover, .btn-outline-primary:focus, .btn-outline-primary:active, .btn-outline-primary.active, .open>.dropdown-toggle.btn-outline-primary {
-  color: #fff;
-  background-color: #C4B147;
-  background-image: none;
-  border-color: #C4B147;
+.btn-outline-primary:hover, .btn-outline-primary.focus, .btn-outline-primary:focus, 
+.btn-outline-primary:active, .btn-outline-primary.active {
+  color: #fff !important;
+  background-color: #C4B147 !important;
+  background-image: none !important;
+  box-shadow: 0 0 0 0.2rem rgba(196, 177, 71, 0.5) !important;
+}
+
+.btn-outline-primary:not([disabled]):not(.disabled).active, .btn-outline-primary:not([disabled]):not(.disabled):active, .show>.btn-outline-primary.dropdown-toggle {
+  box-shadow: 0 0 0 0.2rem rgba(196, 177, 71, 0.5) !important;
 }
