@@ -130,9 +130,12 @@ function removeChart() {
 
 function createChartID() {
   var chartDiv = document.createElement("div");
-  chartDiv.id = "chart";
-  document.body.appendChild(chartDiv);
-  console.log(chartDiv.id); 
+  chartDiv.id = "chart";  // set new div id to "chart" 
+
+  var container = document.getElementsByClassName("container-fluid")[0]; 
+  container.appendChild(chartDiv); // place in container-fluid 
+
+  console.log(container); 
 }
 
 /// CHANGE CHART SUBTITLE 
