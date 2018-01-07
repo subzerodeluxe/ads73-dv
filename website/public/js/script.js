@@ -134,18 +134,21 @@ function createChartNode() {
   var container = document.getElementsByClassName("container-fluid")[0]; 
   container.appendChild(chartDiv); // place in container-fluid 
 
-  console.log(container); 
+  //console.log(container); 
 }
 
 /// Change chart subtitle 
 function changeTitle(title) {
   var newTitle = document.getElementsByClassName("subtitle")[0]; 
   newTitle.innerHTML = title;
-  console.log(newTitle); 
+  //console.log(newTitle); 
 }
 
-// LOAD NEW CHART
-function loadNewChart() {
+// Load a new chart 
+function updateBars(event) {
+  console.log(event);
+  removeChart(); 
+  
   changeTitle("Wie dit leest kan niets!"); 
   
   createChartNode(); 
@@ -157,13 +160,3 @@ function loadNewChart() {
   
   createBasicChart(musicDataset); 
 }
-
-/// UPDATE CHART 
-function updateBars() {	
-  removeChart(); 
-
-  loadNewChart(); 
-
-}
-
-d3.select("#change").on("click", updateBars);
