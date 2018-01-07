@@ -1,5 +1,5 @@
 window.addEventListener("load", function donutChart() {
-    d3.select("input[value=\"total\"]").property("checked", true);
+    d3.select("input[value=\"boys\"]").property("checked", true);
   
     var svg = d3.select("body")
       .append("svg")
@@ -43,35 +43,25 @@ window.addEventListener("load", function donutChart() {
     var color = d3.scale.ordinal()
       .range(colorRange.range());
   
+    datasetBoys = [
+            {label:"Rock", value:25}, 
+            {label:"Pop", value:20}, 
+            {label:"Dance", value:10},
+            {label:"Classical", value:5},
+            {label:"Hiphop", value:20},
+            {label:"Metal", value:20}
+        ];
   
-    datasetTotal = [
-        {label:"Category 1", value:19}, 
-            {label:"Category 2", value:5}, 
-            {label:"Category 3", value:13},
-            {label:"Category 4", value:17},
-            {label:"Category 5", value:19},
-            {label:"Category 6", value:27}
-            ];
+    datasetGirls = [
+        {label:"Rock", value:25}, 
+        {label:"Pop", value:24}, 
+        {label:"Dance", value:24},
+        {label:"Classical", value:15},
+        {label:"Hiphop", value:8},
+        {label:"Metal", value:4}
+    ];
   
-    datasetOption1 = [
-        {label:"Category 1", value:22}, 
-            {label:"Category 2", value:33}, 
-            {label:"Category 3", value:4},
-            {label:"Category 4", value:15},
-            {label:"Category 5", value:36},
-            {label:"Category 6", value:0}
-            ];
-  
-    datasetOption2 = [
-        {label:"Category 1", value:10}, 
-            {label:"Category 2", value:20}, 
-            {label:"Category 3", value:30},
-            {label:"Category 4", value:5},
-            {label:"Category 5", value:12},
-            {label:"Category 6", value:23}
-            ];
-  
-    change(datasetTotal);
+    change(datasetBoys);
   
   
     d3.selectAll("input")
@@ -79,17 +69,14 @@ window.addEventListener("load", function donutChart() {
       
     function selectDataset() {
       var value = this.value;
-      if (value == "total")
+      
+      if (value == "boys")
       {
-        change(datasetTotal);
+        change(datasetBoys);
       }
-      else if (value == "option1")
+      else if (value == "girls")
       {
-        change(datasetOption1);
-      }
-      else if (value == "option2")
-      {
-        change(datasetOption2);
+        change(datasetGirls);
       }
     }
   

@@ -149,14 +149,14 @@ function updateBars(event) {
   console.log(event);
   removeChart(); 
   
-  changeTitle("Wie dit leest kan niets!"); 
+  changeTitle("Boys like horror films more than girls"); 
   
   createChartNode(); 
 
-  musicDataset = [
-    {label:"Boys", "Rock":1, "Pop":25, "Classic": 4, "Techno":15, "Metal":15},
-    {label:"Girls", "Rock":8, "Pop":10, "Classic": 6, "Techno":35, "Metal":45}
+  filmsDataset = [
+    {label:"Boys", "Do not enjoy at all": 17, "Enjoy a little bit": 20, "Neutral": 23, "Enjoy": 20, "Enjoy very much": 20 },
+    {label:"Girls", "Do not enjoy at all": 32, "Enjoy a little bit": 18, "Neutral": 20, "Enjoy": 16, "Enjoy very much": 14 },
   ];
   
-  createBasicChart(musicDataset); 
+  createBasicChart(filmsDataset); 
 }
